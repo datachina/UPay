@@ -1,1 +1,2 @@
 rootProject.name = "UPay"
+include ':AliPay'
