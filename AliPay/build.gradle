@@ -35,6 +35,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    api(name: 'alipaySdk-15.6.5-20190718211148', ext: 'aar')
-
+    implementation(name: 'alipaysdk-15.8.03.210428205839', ext: 'aar')
 }
