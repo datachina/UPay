@@ -1,8 +1,7 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
-
-group = 'com.gitee.jidaofeng'
 
 android {
     compileSdk 30
@@ -27,6 +26,20 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // 创建一个release Maven发布。
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.gitee.jidaofeng'
+                artifactId = 'upay'
+                version = '1.0'
+            }
+        }
     }
 }
 
