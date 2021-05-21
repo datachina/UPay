@@ -3,9 +3,16 @@ buildscript {
         mavenLocal()
         mavenCentral()
         google()
+        maven { url "https://jitpack.io" }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.1.0-alpha01"
+        // gradle
+        classpath "com.android.tools.build:gradle:4.2.0"
+        // maven 打包插件
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+
     }
 }
 
@@ -14,6 +21,8 @@ allprojects {
         flatDir {
             dirs 'libs'
         }
+        mavenLocal()
+        mavenCentral()
         google()
         maven {
             url 'http://maven.aliyun.com/nexus/content/groups/public/'
@@ -32,6 +41,7 @@ allprojects {
             allowInsecureProtocol = true
         }
         maven { url "https://jitpack.io" }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
 }
 
